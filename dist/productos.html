@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Soy un estudiante de Full-Stack Development, actualmente enfocado en construir una carrera como Desarrollador.">
+        <meta name="keywords" content="Software, Web Development, Programmer, HTML, CSS, Bootstrap, Javascript, Python, Tailwind">
+        <meta name="author" content="Hernan Agustin Otero">
+        <meta name="copyright" content="GuzH09">
+        <meta property="og:title" content=GuzH Ecommerce - Productos>
+        <meta property="og:site_name" content=GuzH Ecommerce>
+        <meta property="og:url" content=https://guzh09.github.io>
+        <meta property="og:description" content=Soy un estudiante de Full-Stack Development, actualmente enfocado en construir una carrera como Desarrollador.>
+        <meta property="og:type" content=website>
+        <meta property="og:image" content=https://i.gyazo.com/b4ff5693910d740cca0a94e81c397c06.png>
+        <meta name="robots" content="index, follow">
+        <title>GuzH Ecommerce - Productos</title>
+        <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./output.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    </head>
+    <body>
+        <header class="sticky top-0 w-full shadow-md">
+            <nav class="bg-[#4C3D3D] md:bg-radial-gradient">
+                <div class="top-0 flex justify-between items-center mx-5 max-w-full px-2 md:mx-20 md:px-6 md:block">
+                    <div class="flex justify-center items-center">
+                        <img class="h-20 w-auto md:h-28" src="../assets/img/logoecommerce.png" alt="Ecommerce"> 
+                    </div>
+                    <div class="flex justify-between items-center h-12 max-w-full px-2 md:mx-20 md:px-6 md:justify-center">
+                        <div class="nav-links duration-500 -z-10 md:z-10 bg-[#4C3D3D] shadow-md fixed min-h-[30vh] left-0 w-full flex items-center px-16 md:shadow-none md:bg-transparent md:bg-radial-gradient-transparent md:justify-center md:static md:min-h-fit md:w-auto top-[-100%]">
+                            <ul class="flex flex-col gap-12 md:gap-10 md:items-center md:flex-row">
+                                <li>    
+                                    <a class="text-white hover:text-gray-500" href="./index.html">Inicio</a>
+                                </li>
+                                <li>
+                                    <a class="text-white hover:text-gray-500" href="#">Productos</a>
+                                </li>
+                                <li>
+                                    <a class="text-white hover:text-gray-500" href="./nosotros.html">Nosotros</a>
+                                </li>
+                                <li>
+                                    <a class="text-white hover:text-gray-500" href="./contactos.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        <div class="z-30 flex items-center gap-6">
+                            <ion-icon onclick="onToggleMenu(this)" name="menu-outline" class="text-white text-3xl cursor-pointer md:hidden"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="bg-gradient-to-b from-[#FFF7D4] to-[#ffeaa3]">
+            <section>
+                <div class="pt-5 w-full text-center lg:text-right lg:pr-10 lg:pb-4 xl:pr-64">
+                    <label for="sort" class="font-bebasneue text-2xl text-gray-800 lg:text-xl">Ordenar por:</label>
+                    <br>
+                    <select id="sort" class="my-2">
+                        <option value="price-ascending" selected="">Precio: Menor a Mayor</option>
+                        <option value="price-descending">Precio: Mayor a Menor</option>
+                        <option value="alpha-ascending">A - Z</option>
+                        <option value="alpha-descending">Z - A</option>
+                        <option value="created-descending">Más Nuevo al más Viejo</option>
+                        <option value="created-ascending">Más Viejo al más Nuevo</option>
+                        <option value="best-selling">Más Vendidos</option>
+                    </select>
+                </div>
+                <div class="lg:flex lg:max-w-full lg:mx-10 lg:gap-5 xl:px-56">
+                    <div class="hidden lg:block">
+                        <h1 class="font-bebasneue text-2xl text-gray-800 lg:text-xl">Categorías</h1>
+                        <ul class="lg:mb-5">
+                            <li><a href="" class="font-bebasneue text-xl text-gray-800 lg:text-sm">Latas</a></li>
+                            <li><a href="" class="font-bebasneue text-xl text-gray-800 lg:text-sm">Packs de Latas</a></li>
+                            <li><a href="" class="font-bebasneue text-xl text-gray-800 lg:text-sm">Vasos</a></li>
+                            <li><a href="" class="font-bebasneue text-xl text-gray-800 lg:text-sm">Otros</a></li>
+                        </ul>
+                        <h1 class="font-bebasneue text-2xl text-gray-800 lg:text-xl mb-3">Filtros</h1>
+                        <h2 class="font-bebasneue text-2xl text-gray-800 lg:text-lg">Precio</h2>
+                        <ul class="lg:mb-5">
+                            <li><a href="" class="font-bebasneue text-xl text-gray-800 lg:text-sm">+5000</a></li>
+                            <li><a href="" class="font-bebasneue text-xl text-gray-800 lg:text-sm">+4000</a></li>
+                            <li><a href="" class="font-bebasneue text-xl text-gray-800 lg:text-sm">+3000</a></li>
+                            <li><a href="" class="font-bebasneue text-xl text-gray-800 lg:text-sm">+2000</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="grid max-w-full mx-10 grid-cols-1 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-10 xl:gap-5 xl:mx-0">
+                        <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+                            <div>
+                                <img class="mb-1" src="../assets/img/beer-1.jpg" alt="Beer Photo">
+                            </div>
+                            <p class="my-1 font-bebasneue">"-----" Honey - Lata 473ML</p>
+                            <h3 class="my-1 font-bebasneue text-2xl">$1500</h3>
+                            <a href="./404.html" class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]">AGREGAR AL CARRITO</a>
+                        </article>
+                        <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+                            <div>
+                                <img class="mb-1" src="../assets/img/beer-2.jpg" alt="Beer Photo">
+                            </div>
+                            <p class="my-1 font-bebasneue">"-----" American IPA - Lata 473ML</p>
+                            <h3 class="my-1 font-bebasneue text-2xl">$1500</h3>
+                            <a href="./404.html" class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]">AGREGAR AL CARRITO</a>
+                        </article>
+                        <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+                            <div>
+                                <img class="mb-1" src="../assets/img/beer-3.jpg" alt="Beer Photo">
+                            </div>
+                            <p class="my-1 font-bebasneue">"-----" Golden Ale - Lata 473ML</p>
+                            <h3 class="my-1 font-bebasneue text-2xl">$1500</h3>
+                            <a href="./404.html" class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]">AGREGAR AL CARRITO</a>
+                        </article>
+                        <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+                            <div>
+                                <img class="mb-1" src="../assets/img/beer-4.jpg" alt="Beer Photo">
+                            </div>
+                            <p class="my-1 font-bebasneue">"-----" Stout - Lata 473ML</p>
+                            <h3 class="my-1 font-bebasneue text-2xl">$1500</h3>
+                            <a href="./404.html" class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]">AGREGAR AL CARRITO</a>
+                        </article>
+                        <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+                            <div>
+                                <img class="mb-1" src="../assets/img/beer-5.jpg" alt="Beer Photo">
+                            </div>
+                            <p class="my-1 font-bebasneue">"-----" Cream Stout - Lata 473ML</p>
+                            <h3 class="my-1 font-bebasneue text-2xl">$1500</h3>
+                            <a href="./404.html" class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]">AGREGAR AL CARRITO</a>
+                        </article>
+                        <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+                            <div>
+                                <img class="mb-1" src="../assets/img/beer-6.jpg" alt="Beer Photo">
+                            </div>
+                            <p class="my-1 font-bebasneue">"-----" Scottish - Lata 473ML</p>
+                            <h3 class="my-1 font-bebasneue text-2xl">$1500</h3>
+                            <a href="./404.html" class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]">AGREGAR AL CARRITO</a>
+                        </article>
+                        <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+                            <div>
+                                <img class="mb-1" src="../assets/img/beer-7.jpg" alt="Beer Photo">
+                            </div>
+                            <p class="my-1 font-bebasneue">"-----" Neipa - Lata 473ML</p>
+                            <h3 class="my-1 font-bebasneue text-2xl">$1500</h3>
+                            <a href="./404.html" class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]">AGREGAR AL CARRITO</a>
+                        </article>
+                        <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+                            <div>
+                                <img class="mb-1" src="../assets/img/beer-8.jpg" alt="Beer Photo">
+                            </div>
+                            <p class="my-1 font-bebasneue">"-----" APA - Lata 473ML</p>
+                            <h3 class="my-1 font-bebasneue text-2xl">$1500</h3>
+                            <a href="./404.html" class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]">AGREGAR AL CARRITO</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="text-center pb-10">
+                    <span class="material-symbols-outlined text-gray-800">local_shipping</span>
+                    <h1 class="font-bebasneue text-3xl text-gray-800 font-bold">ENVIOS EN CABA Y GRAN BUENOS AIRES</h1>
+                    <h2 class="font-bebasneue text-sm text-gray-800 font-light">De Martes a Viernes (consultar zonas)</h2>
+                </div>
+            </section>
+        </main>
+        <footer class="py-5 px-2 bg-[#4C3D3D] sm:px-8 xl:px-56">
+            <div class="lg:flex lg:justify-between lg:gap-3">
+                <div class="lg:block lg:text-left">
+                    <div class="pb-5 text-center sm:text-left lg:block lg:text-left lg:pb-0">
+                        <h1 class="font-bebasneue text-2xl text-white lg:text-lg">NAVEGACIÓN</h1>
+                    </div>
+                    <div class="grid grid-cols-2 text-center sm:text-left lg:block">
+                        <div><a href="./index.html" class="font-bebasneue text-xl text-white lg:text-sm">Inicio</a></div>
+                        <div><a href="#" class="font-bebasneue text-xl text-white lg:text-sm">Productos</a></div>
+                        <div><a href="./nosotros.html" class="font-bebasneue text-xl text-white lg:text-sm">Nosotros</a></div>
+                        <div><a href="./contactos.html" class="font-bebasneue text-xl text-white lg:text-sm">Contacto</a></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="lg:block lg:text-left">
+                        <div class="py-5 text-center sm:text-left lg:p-0">
+                            <h1 class="font-bebasneue text-2xl text-white lg:text-lg">Medios de Pago</h1>
+                        </div>
+                        <div class="grid grid-cols-4 gap-y-2 gap-x-4 lg:gap-2">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="visa">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="mastercard">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="amex">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="diners">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="ar_banelco">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="ar_cabal">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="ar_tarjeta-naranja">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="ar_tarjeta-shopping">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="mercadopago">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="ar_argencard">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="pagofacil">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" class="h-14 lg:h-8 lg:w-auto" alt="rapipago">
+                        </div>
+                    </div>
+                    <div class="lg:block lg:text-left">
+                        <div class="py-5 text-center sm:text-left">
+                            <h1 class="font-bebasneue text-2xl text-white lg:text-lg">Formas de Envío</h1>
+                        </div>
+                        <div class="flex justify-center gap-2 pb-5 sm:justify-start">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/table@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/table@2x.png" class="h-12 w-auto lg:h-8" alt="table">
+                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/branch@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/branch@2x.png" class="h-12 w-auto lg:h-8" alt="branch">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="pb-2 text-center sm:text-left">
+                        <h1 class="font-bebasneue text-2xl text-white lg:text-lg">Contactanos</h1>
+                    </div>
+                    <div class="pb-2 text-center sm:text-left sm:flex sm:justify-start sm:items-center sm:gap-5">
+                        <span class="material-symbols-outlined text-white">call</span>
+                        <p class="font-light text-sm text-gray-200 lg:text-xs">Whatsapp (123) 4567-8999</p>
+                    </div>
+                    <div class="pb-2 text-center sm:text-left sm:flex sm:justify-start sm:items-center sm:gap-5">
+                        <span class="material-symbols-outlined text-white" >alternate_email</span>
+                        <p class="font-light text-sm text-gray-200 lg:text-xs">test@gmail.com</p>
+                    </div>
+                    <div class="pb-5 text-center sm:text-left sm:flex sm:justify-start sm:items-center sm:gap-5">
+                        <span class="material-symbols-outlined text-white" >location_on</span>
+                        <p class="font-light text-sm text-gray-200 lg:text-xs">Lorem Ipsum, CABA.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="pb-5 text-center sm:text-left">
+                        <h1 class="font-bebasneue text-2xl text-white lg:text-lg">Redes Sociales</h1>
+                    </div>
+                    <div class="flex justify-center gap-7 pb-5 sm:justify-start lg:justify-center">
+                        <a href="#"><i class="fa-brands fa-instagram text-white text-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook text-white text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-5 text-center">
+                <h1 class="font-light text-sm text-gray-200">Copyright 2023 by Hernan Agustin Otero | All Rights Reserved.</h1>
+            </div>
+        </footer>
+        <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu-outline' ? 'close-outline' : 'menu-outline'
+                if (navLinks.classList.contains('top-[-100%]')) {
+                    navLinks.classList.replace('top-[-100%]', 'top-[9%]')
+                } else {
+                    navLinks.classList.replace('top-[9%]', 'top-[-100%]')
+                }
+            }
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://kit.fontawesome.com/d84373c6ce.js" crossorigin="anonymous"></script>
+    </body>
+</html>
