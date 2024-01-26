@@ -20,16 +20,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     </head>
     <body>
-        <header class="sticky top-0 w-full shadow-md">
+        <header class="sticky top-0 w-full shadow-md z-50">
             <nav class="bg-[#4C3D3D] md:bg-radial-gradient">
-                <div class="top-0 flex justify-between items-center mx-5 max-w-full px-2 md:mx-20 md:px-6 md:block">
+                <div class="top-0 flex justify-between items-center mx-5 max-w-full px-2 lg:mx-20 md:px-6 md:block">
                     <div class="flex justify-center items-center">
                         <img class="h-20 w-auto md:h-28" src="../assets/img/logoecommerce.png" alt="Ecommerce"> 
                     </div>
-                    <div class="flex justify-between items-center h-12 max-w-full px-2 md:mx-20 md:px-6 md:justify-center">
-                        <div class="nav-links duration-500 -z-10 md:z-10 bg-[#4C3D3D] shadow-md fixed min-h-[30vh] left-0 w-full flex items-center px-16 md:shadow-none md:bg-transparent md:bg-radial-gradient-transparent md:justify-center md:static md:min-h-fit md:w-auto top-[-100%]">
+                    <div class="flex justify-between items-center h-12 max-w-full px-2 lg:mx-20 md:px-6 md:justify-center">
+                        <div class="nav-links duration-500 -z-10 md:z-10 bg-[#4C3D3D] shadow-md fixed min-h-[40vh] left-0 w-full flex items-center px-16 md:shadow-none md:bg-transparent md:bg-radial-gradient-transparent md:justify-center md:static md:min-h-fit md:w-auto top-[-100%]">
                             <ul class="flex flex-col gap-12 md:gap-10 md:items-center md:flex-row">
                                 <li>    
                                     <a class="text-white hover:text-gray-500" href="../index.html">Inicio</a>
@@ -43,6 +44,9 @@
                                 <li>
                                     <a class="text-white hover:text-gray-500" href="./contactos.html">Contacto</a>
                                 </li>
+                                <li>
+                                    <button class="text-white hover:text-gray-500" onclick="toggleShoppingCart()" id="itemsAmount">Tu Carrito</button>
+                                </li>
                             </ul>
                         </div>
                     
@@ -55,6 +59,25 @@
         </header>
         <main class="bg-gradient-to-b from-[#FFF7D4] to-[#ffeaa3]">
             <section>
+                <section class="fixed top-0 md:top-40 h-full -right-full w-full md:w-80 bg-[#605151] shadow-md z-50" id="shoppingCartSection">
+                    <div class="text-white absolute top-3 left-3 md:top-0 md:-left-4 cursor-pointer" id="closeCart" onclick="closeShoppingCart()">X</div>
+                    <div class="shadow-[rgba(0,0,0,0.15)_0px_10px_6px_-1px] flex p-4 pl-8 md:p-4 justify-between items-center">
+                        <h1 class="font-bebasneue text-3xl text-white font-bold">CARRITO</h1>
+                        <button class="material-symbols-outlined text-white" id="emptyCart" onclick="emptyShoppingCart()">delete</button>
+                    </div>
+                    <div class="overflow-auto h-[70%] md:h-[55%] lg:h-[60%] p-4 " id="cartContent">
+                        <div class="flex justify-center">
+                            <h2 class="font-bebasneue text-lg text-white font-light">Tu carrito está vacío.</h2>
+                        </div>
+                    </div>
+                    <div class="p-4 font-bebasneue text-2xl text-center text-white shadow-[rgba(0,0,0,0.15)_0px_-10px_6px_-1px]"> 
+                        <p id="totalCostText"></p>
+                    </div>
+                    <div class="p-4">
+                        <button class="w-full bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]" onclick="buyShoppingCart()">Comprar</button>
+                    </div>
+                </section>
+                <div id="overlay" class="fixed top-0 left-0 w-full h-full bg-gray-700 opacity-50 z-40 hidden" onclick="closeShoppingCart()"></div>
                 <div class="text-center mx-5 py-5 max-w-full px-2 md:mx-20 md:py-5 md:px-6 xl:mx-60">
                     <h1 class="font-bebasneue text-3xl text-gray-800 font-bold">NOSOTROS</h1>
                 </div>
@@ -147,19 +170,12 @@
                 <h1 class="font-light text-sm text-gray-200">Copyright 2023 by Hernan Agustin Otero | All Rights Reserved.</h1>
             </div>
         </footer>
-        <script>
-            const navLinks = document.querySelector('.nav-links')
-            function onToggleMenu(e){
-                e.name = e.name === 'menu-outline' ? 'close-outline' : 'menu-outline'
-                if (navLinks.classList.contains('top-[-100%]')) {
-                    navLinks.classList.replace('top-[-100%]', 'top-[9%]')
-                } else {
-                    navLinks.classList.replace('top-[9%]', 'top-[-100%]')
-                }
-            }
-        </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="https://kit.fontawesome.com/d84373c6ce.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../js/navbar.js"></script>
+        <script src="../js/shoppingcart.js"></script>
     </body>
 </html>

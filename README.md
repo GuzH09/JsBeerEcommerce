@@ -1,3 +1,3 @@
 # Tailwind Test
 
-Maqueta web desarrollada utilizando Tailwind.
+Maqueta web desarrollada utilizando Tailwind y Javascript.
