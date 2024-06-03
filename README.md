@@ -1,3 +1,3 @@
-# Tailwind Test
+# JsBeerEcommerce
 
-Maqueta web desarrollada utilizando Tailwind y Javascript.
+Maqueta web desarrollada utilizando TailwindCSS, HTML, y Javascript.
