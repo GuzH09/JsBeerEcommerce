@@ -161,11 +161,10 @@ document.addEventListener("astro:page-load", async () => {
             title: "Gracias por tu compra!",
             icon: "success"
           });
+          shoppingCart.length = 0;
+          saveShoppingCartToLocalStorage();
+          showProductsShoppingCart();
         }
-        shoppingCart.length = 0;
-        saveShoppingCartToLocalStorage();
-        showProductsShoppingCart();
-        console.log(shoppingCart);
       });
     }
   }
