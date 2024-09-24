@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "name": "Honey - Lata 473ML",
+      "cost": 2600,
+      "imageSrc": "./beer-1.jpg",
+      "imageAlt": "Cerveza",
+      "category": "lata",
+      "id": 1
+    },
+    {
+      "name": "American IPA - Lata 473ML",
+      "cost": 2500,
+      "imageSrc": "./beer-2.jpg",
+      "imageAlt": "Cerveza",
+      "category": "lata",
+      "id": 2
+    },
+    {
+      "name": "Golden Ale - Lata 473ML",
+      "cost": 2500,
+      "imageSrc": "./beer-3.jpg",
+      "imageAlt": "Cerveza",
+      "category": "lata",
+      "id": 3
+    },
+    {
+      "name": "Stout - Lata 473ML",
+      "cost": 2700,
+      "imageSrc": "./beer-4.jpg",
+      "imageAlt": "Cerveza",
+      "category": "lata",
+      "id": 4
+    },
+    {
+      "name": "Cream Stout - Lata 473ML",
+      "cost": 2500,
+      "imageSrc": "./beer-5.jpg",
+      "imageAlt": "Cerveza",
+      "category": "lata",
+      "id": 5
+    },
+    {
+      "name": "Scottish - Lata 473ML",
+      "cost": 2600,
+      "imageSrc": "./beer-6.jpg",
+      "imageAlt": "Cerveza",
+      "category": "lata",
+      "id": 6
+    },
+    {
+      "name": "Neipa - Lata 473ML",
+      "cost": 2500,
+      "imageSrc": "./beer-7.jpg",
+      "imageAlt": "Cerveza",
+      "category": "lata",
+      "id": 7
+    },
+    {
+      "name": "APA - Lata 473ML",
+      "cost": 2500,
+      "imageSrc": "./beer-8.jpg",
+      "imageAlt": "Cerveza",
+      "category": "lata",
+      "id": 8
+    },
+    {
+      "name": "Packx6 APA - Latas 473ML",
+      "cost": 12000,
+      "imageSrc": "./beer-8.jpg",
+      "imageAlt": "Cerveza",
+      "category": "pack",
+      "id": 9
+    },
+    {
+      "name": "Packx6 IPA - Latas 473ML",
+      "cost": 10000,
+      "imageSrc": "./beer-8.jpg",
+      "imageAlt": "Cerveza",
+      "category": "pack",
+      "id": 10
+    },
+    {
+      "name": "Packx6 Stout - Latas 473ML",
+      "cost": 15000,
+      "imageSrc": "./beer-8.jpg",
+      "imageAlt": "Cerveza",
+      "category": "pack",
+      "id": 11
+    },
+    {
+      "name": "Vaso Pinta",
+      "cost": 1300,
+      "imageSrc": "./beer-8.jpg",
+      "imageAlt": "Cerveza",
+      "category": "vaso",
+      "id": 12
+    }
+  ]
+}

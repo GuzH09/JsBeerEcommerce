@@ -1,0 +1,29 @@
+---
+import Image from "astro/components/Image.astro";
+import BeerImage from "@/assets/cerveza-2.jpg";
+
+---
+
+<section>
+  <div class="text-center mx-5 py-5 max-w-full px-2 md:mx-20 md:py-5 md:px-6 xl:mx-60">
+    <h1 class="font-bebasneue text-3xl text-gray-800 font-bold">NOSOTROS</h1>
+  </div>
+
+  <div class="mx-8 mb-5 h-50 rounded-md overflow-hidden md:flex md:justify-center md:items-center md:h-60 xl:mx-60">
+    <Image
+      class=""
+      src={BeerImage}
+      alt="Beer Photo"
+      widths={[240, 540, 720, BeerImage.width]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${BeerImage.width}px`}
+      quality={"high"}
+    />
+  </div>
+
+  <div class="mx-8 pb-5 font-['Poppins'] prose-base xl:mx-60">
+    <p class="mb-5 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum nam facilis rerum quo fugiat magnam modi nulla quam eum beatae quod, dignissimos omnis eos sequi totam. Quam harum ut porro.</p>
+    <p class="mb-5 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi dolore, hic vero similique saepe recusandae et explicabo beatae totam pariatur praesentium molestiae. Doloremque fuga rerum necessitatibus est explicabo, excepturi odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quam ut assumenda! Doloremque animi illum consequuntur soluta rerum cumque.</p>
+    <p class="mb-5 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi qui officia odit ea nemo veritatis pariatur distinctio temporibus sapiente nihil, ipsa doloremque est atque voluptatem maiores, ad blanditiis dicta aliquam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur unde, eius omnis atque numquam consequuntur labore! Quis nisi illo tempora adipisci sequi!</p>
+    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, neque. Corporis temporibus ullam libero iure minima illo laborum.</p>
+  </div>
+</section>

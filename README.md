@@ -1,3 +1,3 @@
 # JsBeerEcommerce
 
-Maqueta web desarrollada utilizando TailwindCSS, HTML, y Javascript.
+Maqueta web desarrollada utilizando Astro, TailwindCSS, y Javascript.

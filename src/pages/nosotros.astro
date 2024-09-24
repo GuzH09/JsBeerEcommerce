@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ShoppingCart from '@/components/ShoppingCart.astro';
+import AboutUsSection from '@/components/AboutUsSection.astro';
+---
+
+<Layout
+  title="GuzH Ecommerce - Nosotros"
+  description=""
+  canonical=""
+  lang="es"
+>
+  <main class="bg-gradient-to-b from-[#FFF7D4] to-[#ffeaa3]">
+    <ShoppingCart />
+    
+    <!-- Overlay element for click shielding from Cart -->
+    <!-- <section id="overlayCart" class="hidden fixed inset-0 bg-white z-10"></section> -->
+    <div id="overlayCart" class="fixed top-0 left-0 w-full h-full bg-gray-700 opacity-50 z-40 hidden"></div>
+
+    <AboutUsSection />
+  </main>
+</Layout>
+
+<script src="../utils/products.ts"></script>

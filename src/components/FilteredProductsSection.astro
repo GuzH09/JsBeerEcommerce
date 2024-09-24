@@ -1,0 +1,64 @@
+---
+---
+
+<section>
+  <div class="pt-5 w-full text-center lg:text-right lg:pr-10 lg:pb-4 xl:pr-64">
+    <label for="sort" class="font-bebasneue text-2xl text-gray-800 lg:text-xl">Ordenar por:</label>
+    <br>
+    <select id="sort" class="my-2">
+      <option value="price-ascending" selected="">Precio: Menor a Mayor</option>
+      <option value="price-descending">Precio: Mayor a Menor</option>
+      <option value="alpha-ascending">A - Z</option>
+      <option value="alpha-descending">Z - A</option>
+    </select>
+  </div>
+
+  <div class="lg:flex lg:max-w-full lg:mx-10 lg:gap-5 xl:px-56">
+    <div class="hidden lg:block">
+      <h1 class="font-bebasneue text-2xl text-gray-800 lg:text-xl">Categorías</h1>
+
+      <ul class="lg:mb-5" id="sortCategories">
+        <li><button class="font-bebasneue text-xl text-gray-800 lg:text-sm">Latas</button></li>
+        <li><button class="font-bebasneue text-xl text-gray-800 lg:text-sm">Packs de Latas</button></li>
+        <li><button class="font-bebasneue text-xl text-gray-800 lg:text-sm">Vasos</button></li>
+        <li><button class="font-bebasneue text-xl text-gray-800 lg:text-sm">Todos</button></li>
+      </ul>
+
+      <h1 class="font-bebasneue text-2xl text-gray-800 lg:text-xl mb-3">Filtros</h1>
+
+      <h2 class="font-bebasneue text-2xl text-gray-800 lg:text-lg">Precio</h2>
+
+      <ul class="lg:mb-5" id="filterCategories">
+        <li><button class="font-bebasneue text-xl text-gray-800 lg:text-sm">+3000</button></li>
+        <li><button class="font-bebasneue text-xl text-gray-800 lg:text-sm">+2500</button></li>
+        <li><button class="font-bebasneue text-xl text-gray-800 lg:text-sm">+2000</button></li>
+        <li><button class="font-bebasneue text-xl text-gray-800 lg:text-sm">+1000</button></li>
+      </ul>
+    </div>
+    
+    <div class="grid max-w-full mx-10 grid-cols-1 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-10 xl:gap-5 xl:mx-0" id="productsSection">
+      <!-- {productsArray.slice(0, 8).map((product) => (
+        <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+          <div>
+            <Image 
+              src={product.imageSrc} 
+              alt={product.imageAlt} 
+              width={300} 
+              height={300} 
+              quality={"high"} 
+            />
+          </div>
+          <p class="my-1 font-bebasneue">{product.name}</p>
+          <h3 class="my-1 font-bebasneue text-2xl">${product.cost}</h3>
+          <button class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]" data-product-id={product.id}>AGREGAR AL CARRITO</button>
+        </article>
+      ))} -->
+    </div>
+  </div>
+
+  <div class="text-center pb-10">
+    <span class="material-symbols-outlined text-gray-800">local_shipping</span>
+    <h1 class="font-bebasneue text-3xl text-gray-800 font-bold">ENVIOS EN CABA Y GRAN BUENOS AIRES</h1>
+    <h2 class="font-bebasneue text-sm text-gray-800 font-light">De Martes a Viernes (consultar zonas)</h2>
+  </div>
+</section>

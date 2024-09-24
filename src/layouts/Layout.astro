@@ -1,0 +1,93 @@
+---
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import SEO from '@/components/SEO.astro';
+import '@fontsource/poppins/100.css';
+import '@fontsource/poppins/200.css';
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/poppins/900.css';
+import '@fontsource/bebas-neue';
+import { ViewTransitions } from 'astro:transitions';
+
+interface Props {
+  title: string
+  description: string
+  canonical?: string
+  lang:string
+}
+
+const { title, description, canonical, lang } = Astro.props
+---
+
+<!doctype html>
+<html lang={lang} class="light">
+  <head>
+    <SEO 
+	  	canonical={canonical}
+	  	description={description}
+	  	title={title}
+	  	lang={lang}
+		/>
+	<ViewTransitions />
+	<script data-astro-rerun src="https://kit.fontawesome.com/d84373c6ce.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  </head>
+  <body>
+	<Header />
+		<slot />
+	<Footer />
+	
+  </body>
+</html>
+
+<style is:global>
+  html {
+	font-family: 'Poppins', 'Bebas Neue', sans-serif;
+	scroll-behavior: smooth; /* Enables smooth scrolling for all anchor links */
+  }
+
+  @media (min-width: 640px) { /* Tailwind 'sm' breakpoint */
+		main {
+			/* padding-left: 2.5rem;
+			padding-right: 2.5rem; */
+		}
+  }
+
+  @media (min-width: 768px) { /* Tailwind 'md' breakpoint */
+		main {
+			/* padding-left: 3rem;
+			padding-right: 3rem; */
+		}
+  }
+
+  @media (min-width: 1024px) { /* Tailwind 'lg' breakpoint */
+		main {
+			/* padding-left: 6rem;
+			padding-right: 6rem; */
+		}
+  }
+
+  @media (min-width: 1280px) { /* Tailwind 'xl' breakpoint */
+		main {
+			/* padding-left: 6rem;
+			padding-right: 6rem;
+			min-height: 90vh; */
+		}
+  }
+
+  @media (min-width: 1536px) { /* Tailwind '2xl' breakpoint */
+		main {
+			/* padding-left: 10rem;
+			padding-right: 10rem;
+			min-height: 90vh; */
+		}
+  }
+</style>

@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "node_modules/astro/dist/assets/types";
+
+interface Props {
+  logoSrc: ImageMetadata;
+  logoAlt: string;
+}
+
+const { logoSrc, logoAlt } = Astro.props;
+---
+
+<a id="" href="/" class="size-20 md:size-28 lg: xl: 2xl:">
+  <Image src={logoSrc} alt={logoAlt} width={112} height={112} quality={"mid"} />
+</a>

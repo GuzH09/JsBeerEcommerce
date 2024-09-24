@@ -1,0 +1,43 @@
+---
+import Image from "astro/components/Image.astro";
+import { GET } from "@/pages/api/products";
+
+let response = await GET(Astro);
+const productsArray = await response.json();
+---
+
+<section>
+  <div class="block items-center text-center mx-5 py-5 max-w-full px-2 md:py-14 md:mx-20 md:px-6">
+    <h1 class="font-bebasneue text-3xl text-gray-800 font-bold">ELEGÍ, PAGÁ Y RECIBÍ TUS CERVEZAS DIRECTO DE FÁBRICA</h1>
+    <h2 class="font-bebasneue text-sm text-gray-800 font-light">Apoyá a los pequeños productores, consumí local.</h2>
+  </div>
+
+  <div class="grid max-w-full mx-10 grid-cols-1 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-10 xl:mx-60" id="productsSection">
+    {productsArray.slice(0, 8).map((product) => (
+      <article class="text-center mb-8 pb-4 rounded-md overflow-hidden">
+        <div>
+          <Image 
+            src={product.imageSrc} 
+            alt={product.imageAlt} 
+            width={400} 
+            height={400} 
+            quality={"high"} 
+          />
+        </div>
+        <p class="my-1 font-bebasneue">{product.name}</p>
+        <h3 class="my-1 font-bebasneue text-2xl">${product.cost}</h3>
+        <button class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]" data-product-id={product.id}>AGREGAR AL CARRITO</button>
+      </article>
+    ))}
+  </div>
+
+  <div class="flex justify-center">
+    <a href="./productos" class="bg-[#FFD95A] font-bebasneue text-gray-900 my-10 w-2/3 md:w-1/3 py-2 hover:bg-[#cbac47] text-center">VER TODOS LOS PRODUCTOS</a>
+  </div>
+
+  <div class="text-center pb-10">
+    <span class="material-symbols-outlined text-gray-800">local_shipping</span>
+    <h1 class="font-bebasneue text-3xl text-gray-800 font-bold">ENVIOS EN CABA Y GRAN BUENOS AIRES</h1>
+    <h2 class="font-bebasneue text-sm text-gray-800 font-light">De Martes a Viernes (consultar zonas)</h2>
+  </div>
+</section>

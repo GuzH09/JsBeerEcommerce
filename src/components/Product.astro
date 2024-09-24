@@ -1,0 +1,20 @@
+---
+import Image from "astro/components/Image.astro";
+
+const { product } = Astro.props
+---
+
+<article class="text-center mb-8 pb-4 rounded-md overflow-hidden" data-id={product.id}>
+  <div>
+    <Image 
+      src={product.imageSrc} 
+      alt={product.imageAlt} 
+      width={300} 
+      height={300} 
+      quality={"high"} 
+    />
+  </div>
+  <p class="my-1 font-bebasneue">{product.name}</p>
+  <h3 class="my-1 font-bebasneue text-2xl">${product.cost}</h3>
+  <button class="bg-[#C07F00] font-bebasneue text-white px-5 py-2 hover:bg-[#FFD95A]" id={`addProduct${product.id}`}>AGREGAR AL CARRITO</button>
+</article>
